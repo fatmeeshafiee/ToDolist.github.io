@@ -23,9 +23,16 @@ colorBox.forEach((value,index)=>{
 //Add HTML
 btnSave.addEventListener('click',()=>{
   if(inputField.value ){
+    inputField.value=''
+    count+=1
+    countTodo.textContent=count
+    DayTodo.value=DayTodo[0].value;
+    TimeTodo.value=DayTodo[0].value;
+    TagTodo.value="";
+    inputField.style.backgroundImage= "linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%)";
     tbodyTodo.innerHTML+=`
     <tr class="table-row">
-        <td class="text-light">1</td>
+        <td class="text-light">${count}</td>
         <td class="TaskName">
           <button class="btn btn-sm" style="background-image:${inputField.style.backgroundImage}" >
             ${inputField.value}
@@ -47,13 +54,7 @@ btnSave.addEventListener('click',()=>{
         </td>
     </tr>
 `
-    inputField.value=''
-    count+=1
-    countTodo.textContent=count
-    DayTodo.value=DayTodo[0].value;
-    TimeTodo.value=DayTodo[0].value;
-    TagTodo.value="";
-    inputField.style.backgroundImage= "linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%)";
+   
    
   } else{
     TagTodoError.style.display="flex"
