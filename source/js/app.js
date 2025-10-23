@@ -92,3 +92,255 @@ btnDelete.addEventListener('click',()=>{
   TagTodo.value="";
   inputField.style.backgroundImage= "linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%)";
 })
+
+
+
+
+
+
+// const inputElem = document.getElementById("input-field")
+// const btnSaveElem = document.getElementById("btn-save")
+// const btnDeleteElem = document.getElementById("btn-delete")
+// const colorBox = document.querySelectorAll(".color-box")
+// const tbodyTodo = document.getElementById("tbodyTodo")
+// const DayTodo = document.getElementById("DayTodo")
+// const TimeTodo = document.getElementById("TimeTodo")
+// const TagTodo = document.getElementById("TagTodo")
+// const countTodo = document.querySelector(".countTodo")
+// // error handling
+// const inputFieldError = document.getElementById("inputFieldError");
+// const DayTodoError = document.getElementById("DayTodoError");
+// const TimeTodoError = document.getElementById("TimeTodoError");
+// const TagTodoError = document.getElementById("TagTodoError");
+// colorBox.forEach(function(colorBox){
+//     colorBox.addEventListener("click" , function(event){
+//         let mainColor = event.target.style.backgroundImage;
+//         inputElem.style.backgroundImage = mainColor
+//     })
+// })
+// function generateNewNote(){
+//     let newTrTodo = document.createElement("tr");
+//     newTrTodo.className = "table-row";
+//     // Task Id
+//     let newTdIdTodo = document.createElement("td");
+//     newTdIdTodo.className = "text-light";
+//     newTdIdTodo.innerHTML = ++tbodyTodo.childElementCount;
+//     // Task Name
+//     if(inputElem.value === "no task name, pls enter"){
+//         inputFieldError.style.display = "block"
+//     }else{
+//         inputFieldError.style.display = "none"
+//     }
+
+
+//     let newTdTaskNameTodo = document.createElement("td");
+//     newTdTaskNameTodo.className = "TaskName";
+//     let newTdTaskNameButtonTodo = document.createElement("button");
+//     newTdTaskNameButtonTodo.className = "btn btn-light btn-sm";
+//     newTdTaskNameButtonTodo.innerHTML = inputElem.value;
+//     let inputBg = inputElem.style.backgroundImage;
+//     newTdTaskNameButtonTodo.style.backgroundImage = inputBg;
+//     newTdTaskNameTodo.append(newTdTaskNameButtonTodo);
+//     inputElem.value = "no task name, pls enter";    // empty field task name input
+//     inputElem.style.backgroundImage = "linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%)";   // empty color task name input
+
+    
+
+
+
+
+    
+
+//     // Task Day
+//     if(DayTodo.value === "not selected"){
+//         DayTodoError.style.display = "block"
+//     }else{
+//         DayTodoError.style.display = "none"
+//     }
+//     let newTdDayTodo = document.createElement("td");
+//     newTdDayTodo.className = "text-light";
+//     newTdDayTodo.innerHTML = DayTodo.value;
+//     DayTodo.value = "not selected";
+
+
+    
+
+
+
+
+//     // Task Time 
+//     if(TimeTodo.value === "not selected"){
+//         TimeTodoError.style.display = "block"
+//     }else{
+//         TimeTodoError.style.display = "none"
+//     }
+//     let newTdTimeTodo = document.createElement("td");
+//     newTdTimeTodo.className = "todo-Time text-light";
+//     newTdTimeTodo.innerHTML = TimeTodo.value;
+//     TimeTodo.value = "not selected";
+
+
+
+
+
+//     // Task Tag
+//     if(TagTodo.value === "no tag"){
+//         TagTodoError.style.display = "block"
+//     }else{
+//         TagTodoError.style.display = "none"
+//     }
+//     let newTdTagTodo = document.createElement("td");
+//     newTdTagTodo.className = "todo-Tag";
+//     let newTdTagButtonTodo = document.createElement("button");
+//     newTdTagButtonTodo.className = "btn btn-primary btn-sm";
+//     newTdTagButtonTodo.innerHTML = TagTodo.value;
+//     newTdTagTodo.append(newTdTagButtonTodo);
+//     TagTodo.value = "no tag";
+
+
+
+
+
+//     // Task Status
+//     let newTdStatusTodo = document.createElement("td");
+//     newTdStatusTodo.className = "todo-status";
+//     let newTdStatusButtonTodo = document.createElement("button");
+//     newTdStatusButtonTodo.className = "btn btn-outline-danger btn-sm"
+//     newTdStatusButtonTodo.innerHTML = "Not Started";
+//     newTdStatusTodo.append(newTdStatusButtonTodo)
+
+
+
+
+//     // Task Edit Button
+//     let newTdEditTodo = document.createElement("td");
+//     let newTdEditButtonTodo = document.createElement("button");
+//     newTdEditButtonTodo.className = "btn btn-outline-success"
+//     let newTdEditButtonSpanTodo = document.createElement("span");
+//     newTdEditButtonSpanTodo.className = "fa fa-edit"
+//     newTdEditButtonTodo.append(newTdEditButtonSpanTodo)
+//     newTdEditTodo.append(newTdEditButtonTodo)
+
+
+
+
+
+//     // Task remove Button
+//     let newTdRemoveTodo = document.createElement("td");
+//     let newTdRemoveButtonTodo = document.createElement("button");
+//     newTdRemoveButtonTodo.className = "btn btn-outline-danger"
+//     let newTdRemoveButtonSpanTodo = document.createElement("span");
+//     newTdRemoveButtonSpanTodo.className = "fa fa-eraser"
+//     newTdRemoveButtonTodo.append(newTdRemoveButtonSpanTodo)
+//     newTdRemoveTodo.append(newTdRemoveButtonTodo)
+
+
+
+
+
+//     newTrTodo.append(newTdIdTodo , newTdTaskNameTodo , newTdDayTodo , newTdTimeTodo , newTdTagTodo , newTdStatusTodo , newTdEditTodo , newTdRemoveTodo)
+
+
+
+//     tbodyTodo.append(newTrTodo)
+
+
+
+
+
+
+
+
+
+//     // start click to convert in progress
+
+
+
+//     newTdStatusButtonTodo.addEventListener("click" , function(event){
+//         event.target.remove();
+//         let newTdStatusButtonInProgressTodo = document.createElement("button");
+//         newTdStatusButtonInProgressTodo.className = "btn btn-outline-warning btn-sm";
+//         newTdStatusButtonInProgressTodo.innerHTML = "In Progress";
+//         newTdStatusTodo.append(newTdStatusButtonInProgressTodo)
+
+
+//         // start click to convert Done
+
+//         newTdStatusButtonInProgressTodo.addEventListener("click" , function(event){
+//             event.target.remove();
+//             let newTdStatusButtonDoneTodo = document.createElement("button");
+//             newTdStatusButtonDoneTodo.className = "btn btn-outline-success btn-sm";
+//             newTdStatusButtonDoneTodo.innerHTML = "Done";
+//             newTdStatusTodo.append(newTdStatusButtonDoneTodo)
+//         })
+
+
+//         // end of click to convert Done
+
+
+//     })
+
+
+
+
+//     // end of click to convert in progress
+
+
+
+
+
+
+
+
+//     // start click to araser to delete row
+//     newTdRemoveButtonSpanTodo.addEventListener("click" , function(){
+//         newTrTodo.remove()
+//     })
+//     // end of click to araser to delete row
+
+
+
+
+//         // start countTodo
+//         countTodo.innerHTML = tbodyTodo.childElementCount;
+      
+//         // end of countTodo
+  
+// }
+// btnDeleteElem.addEventListener("click" , function(){
+//     inputElem.value = "no task name, pls enter";
+//     inputElem.style.backgroundImage = "linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%)";
+
+//     DayTodo.value = "not selected";
+//     TimeTodo.value = "not selected";
+//     TagTodo.value = "no tag";
+// })
+// inputElem.addEventListener("keydown" , function(event){
+//     if(event.keyCode === 13){
+//         if(inputElem.value){
+//             generateNewNote()
+//         }
+//     }
+// })
+
+
+
+
+
+
+
+
+
+// btnSaveElem.addEventListener("click" , generateNewNote)
+
+
+
+
+
+// // let inputField=document.querySelector('#input-field');
+
+// // inputValue=inputField.value
+
+
+
+
