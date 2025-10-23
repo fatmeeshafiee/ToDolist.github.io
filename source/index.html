@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel='stylesheet' href='css/style.css'>
+  <title>Fateme Todo List</title>
+  
+  <link rel="icon" href="icons8-to-do-list-96.png" type="image/png">
+</head>
+<body>
+  <div>
+    <!-- INPUT -->
+    <section id="home">
+      <div class="container">
+        <div class="header upper text-light">Fateme Todo List</div>
+        <br><br>
+        <div class="flex row-gt-sm">
+          <div class="flex flex-50-gt-sm">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mx-auto">
+              <input id="input-field" value="" class="form-control" type="text" placeholder="Write your ToDO">
+              <h5 id="inputFieldError" class="text-warning my-2">please write something</h5>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mx-auto">
+              <div id='color-select'>
+                <div class='color-box' style="background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);"></div>
+                <div class='color-box' style="background-image: linear-gradient(-225deg, #20E2D7 0%, #F9FEA5 100%);"></div>
+                <div class='color-box' style="background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);"></div>
+                <div class='color-box' style="background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);"></div>
+                <div class='color-box' style="background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);"></div>
+                <div class='color-box' style="background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);"></div>
+                <div class='color-box' style="background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);"></div>
+                <div class='color-box' style="background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);"></div>
+                <div class='color-box' style="background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);"></div>
+                <div class='color-box' style="background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);"></div>
+                <div class='color-box' style="background-image: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);"></div>
+                <div class='color-box' style="background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);"></div>
+                <div class='color-box' style="background-image: linear-gradient(-225deg, #9EFBD3 0%, #57E9F2 48%, #45D4FB 100%);"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 my-5">
+                <span class="text-light">choose Date</span>
+                <div class="clock mt-3">
+                  <select name="" id="DayTodo" class="bg-dark text-light">
+                    <option value="not selected">choose Day</option>
+                    <option value="jan, 15 , 2024">jan, 15 , 2024</option>
+                    <option value="jan, 16 , 2024">jan, 16 , 2024</option>
+                    <option value="jan, 17 , 2024">jan, 17 , 2024</option>
+                    <option value="jan, 18 , 2024">jan, 18 , 2024</option>
+                    <option value="jan, 19 , 2024">jan, 19 , 2024</option>
+                    <option value="jan, 20 , 2024">jan, 20 , 2024</option>
+                    <option value="jan, 21 , 2024">jan, 21 , 2024</option>
+                  </select>
+                  <h6 id="DayTodoError" class="text-warning my-2 small">please choose something</h6>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 my-5">
+                <span class="text-light">choose Time</span>
+                <div class="clock mt-3">
+                  <select name="" id="TimeTodo" class="bg-dark text-light">
+                    <option value="not selected" >choose Time</option>
+                    <option value="00:00AM">00:00AM</option>
+                    <option value="00:15AM">00:15AM</option>
+                    <option value="00:30AM">00:30AM</option>
+                    <option value="00:45AM">00:45AM</option>
+                    <option value="01:00AM">01:00AM</option>
+                    <option value="01:15AM">01:15AM</option>
+                    <option value="01:30AM">01:30AM</option>
+                    <option value="01:45AM">01:45AM</option>
+                  </select>
+                  <h6 id="TimeTodoError" class="text-warning my-2 small">please choose something</h6>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 my-5">
+                <div>
+                  <span class="text-light">write Tag</span>
+                  <input id="TagTodo" type="text" value="" class="form-control mt-3 bg-dark text-light" placeholder="enter your tag">
+                  <h6 id="TagTodoError" class="text-warning my-2 small">please write something</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mx-auto my-1 text-right">
+              <button id="btn-save" type="button" class="btn btn-outline-primary"><span class="fa fa-plus"></span></button>
+              <button id="btn-delete" type="button" class="btn btn-outline-danger"><span id="btn-icon"
+                  class="fa fa-eraser"></span></button>
+            </div>
+          </div>
+        </div>
+        <!-- TASKS -->
+        <div class="table-responsive mt-5">
+          <table class="table table-borderless align-middle ">
+            <thead class="todo-table-primary">
+              <tr class="text-light" >
+                <th>id</th>
+                <th>Task Name</th>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Tag</th>
+                <th>Status</th>
+                <th>edit</th>
+                <th>remove</th>
+              </tr>
+            </thead>
+            <tbody class="" id="tbodyTodo">
+            </tbody>
+            <tfoot>
+            </tfoot>
+          </table>
+        </div>
+        <div>
+          <span class="text-light">count: <span class="countTodo"></span></span>
+        </div>
+        <div class="help mt-5 text-warning" style="text-align: left;">
+          <h2>Todo list guide</h2>
+          <div class="text-light">
+            <span style="font-weight: 700;">
+              number 1 : 
+            </span>
+            <span class="">
+              Choose your task with different colors
+            </span>
+          </div>
+          <div class="text-light">
+            <span style="font-weight: 700;">
+              number 2 : 
+            </span>
+            <span class="">
+              Click on the Not Started once to turn it into In Progress
+            </span>
+          </div>
+          <div class="text-light">
+            <span style="font-weight: 700;">
+              number 3 : 
+            </span>
+            <span class="">
+              Click on the In Progress once more to turn it into a Done
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="js/2483004d01.js"></script>
+  <script type='text/javascript' src='js/app.js'></script>
+</body>
+
+</html>
